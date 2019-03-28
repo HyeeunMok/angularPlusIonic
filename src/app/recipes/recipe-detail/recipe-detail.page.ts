@@ -25,6 +25,7 @@ export class RecipeDetailPage implements OnInit {
     this.activateRoute.paramMap.subscribe(paraMap => {
       if (!paraMap.has('recipeId')) {
         // redirect
+        this.router.navigate(['/recipes']);
         return;
       }
       const recipeId = paraMap.get('recipeId');
